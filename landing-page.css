@@ -1,0 +1,279 @@
+@font-face {
+    font-family: "AtkinsonHyperlegible";
+    src: url("Assets/Atkinson-Hyperlegible-Regular-102a.woff2") format("woff2");
+}
+@font-face {
+    font-family: "AtkinsonHyperlegible";
+    src: url("Assets/Atkinson-Hyperlegible-Bold-102.ttf") format("woff2");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "AtkinsonHyperlegible";
+    src: url("Assets/Atkinson-Hyperlegible-BoldItalic-102a.woff2") format("woff2");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "AtkinsonHyperlegible";
+    src: url("Assets/Atkinson-Hyperlegible-Italic-102a.woff2") format("woff2");
+    font-style: italic;
+}
+
+h1 {
+    font-family: "AtkinsonHyperlegible";
+    font-size: 300%;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    font-family: "AtkinsonHyperlegible";
+    font-size: 200%;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: url("Assets/LandingBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.headingDiv {
+    max-width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subheadingDiv {
+    max-width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.frostedGlass {
+    position: relative;
+    backdrop-filter: blur(5px);
+    background-color: #6c6c6c66;
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+    box-shadow: inset 3px 3px 6px rgba(255, 255, 255, 0.4), inset -3px -3px 6px rgba(0, 0, 0, 0.4);
+    margin: 50px;
+    margin-inline: 10vh;
+    min-height: calc(100vh - 40px);
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.return-button {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    padding: 8px 16px;
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.return-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.fade-letter {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeInLetter 1s forwards ease-out;
+}
+
+@keyframes fadeInLetter {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-section {
+    opacity: 0;
+    display: inline-block;
+    white-space: pre-wrap;
+    animation: fadeInLetter 1s forwards ease-out;
+}
+
+.separator {
+    white-space: pre-wrap;
+}
+
+h2 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+h2 a:hover {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
+/* Blog Layout & Entries */
+.blog-posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+    margin: 30px auto 0 auto;
+    width: 100%;
+}
+
+.blog-entry {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.15), inset -1px -1px 3px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.blog-entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 10px;
+}
+
+.blog-entry-title {
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+    text-align: left;
+}
+
+.blog-entry-date {
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+.blog-entry-content {
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.blog-entry-content p {
+    margin: 0 0 14px 0;
+}
+
+.blog-entry-content p:last-child {
+    margin-bottom: 0;
+}
+
+.blog-entry-content h1,
+.blog-entry-content h2,
+.blog-entry-content h3,
+.blog-entry-content h4 {
+    color: rgba(255, 255, 255, 0.95);
+    margin: 18px 0 10px 0;
+    text-align: left;
+}
+
+.blog-entry-content ul,
+.blog-entry-content ol {
+    margin: 0 0 14px 20px;
+    padding: 0;
+}
+
+.blog-entry-content li {
+    margin-bottom: 6px;
+}
+
+.blog-entry-content a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.blog-entry-content a:hover {
+    color: #ffffff;
+}
+
+.blog-entry-content blockquote {
+    border-left: 3px solid rgba(255, 255, 255, 0.4);
+    margin: 14px 0;
+    padding-left: 14px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.blog-entry-content code {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.95em;
+}
+
+.blog-entry-content pre {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 14px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 14px 0;
+}
+
+.blog-entry-content pre code {
+    background: none;
+    padding: 0;
+}
+
+.blog-entry-content hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 18px 0;
+}
+
+.no-posts {
+    text-align: center;
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
