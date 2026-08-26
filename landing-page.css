@@ -38,6 +38,10 @@ h2 {
     text-align: center;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
@@ -54,7 +58,7 @@ body::before {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    filter: blur(3px);
+    filter: blur(0px);
     z-index: -1;
 }
 
@@ -144,16 +148,202 @@ h2 a:hover {
     text-decoration: underline;
 }
 
-/* Blog Layout & Entries */
+/* Blog Layout & Three-Column Structure */
+.blog-layout {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.blog-sidebar-left {
+    flex: 0 0 220px;
+    position: sticky;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.blog-sidebar-right {
+    flex: 0 0 260px;
+    position: sticky;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
 .blog-posts-container {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    max-width: 800px;
-    margin: 30px auto 0 auto;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 760px;
+    margin: 0;
     width: 100%;
 }
 
+.sidebar-panel {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.15), inset -1px -1px 3px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.sidebar-title {
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0 0 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 8px;
+    text-align: left;
+}
+
+.sidebar-text {
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+/* Outline Styling */
+.outline-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.outline-empty {
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+}
+
+.outline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.outline-item:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+    border-left-color: rgba(255, 255, 255, 0.5);
+    transform: translateX(2px);
+}
+
+.outline-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left-color: #ffffff;
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.outline-item-title {
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 0.92rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.3;
+}
+
+.outline-item-date {
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+/* Contact Links Styling */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-group-label {
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+    font-family: "AtkinsonHyperlegible", sans-serif;
+    font-size: 0.88rem;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    word-break: break-all;
+}
+
+.contact-link:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.contact-icon {
+    font-size: 0.95rem;
+    line-height: 1;
+    opacity: 0.85;
+    flex-shrink: 0;
+}
+
+.contact-icon-svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.contact-link:hover .contact-icon-svg {
+    opacity: 1;
+}
+
+/* Blog Entries */
 .blog-entry {
     background-color: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -162,6 +352,7 @@ h2 a:hover {
     box-shadow: inset 1px 1px 3px rgba(255, 255, 255, 0.15), inset -1px -1px 3px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     text-align: left;
+    scroll-margin-top: 30px;
 }
 
 .blog-entry-header {
@@ -276,4 +467,58 @@ h2 a:hover {
     font-family: "AtkinsonHyperlegible", sans-serif;
     color: rgba(255, 255, 255, 0.6);
     font-style: italic;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1150px) {
+    .blog-layout {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .blog-sidebar-left {
+        flex: 1 1 200px;
+        position: static;
+        max-height: none;
+    }
+    .blog-posts-container {
+        flex: 2 1 400px;
+    }
+    .blog-sidebar-right {
+        flex: 1 1 100%;
+        position: static;
+        max-height: none;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .blog-sidebar-right .sidebar-panel {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .frostedGlass {
+        margin: 20px 10px;
+        padding: 20px 15px;
+    }
+
+    .return-button {
+        position: static;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .blog-layout {
+        flex-direction: column;
+    }
+
+    .blog-sidebar-left,
+    .blog-sidebar-right,
+    .blog-posts-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .blog-sidebar-right {
+        flex-direction: column;
+    }
 }

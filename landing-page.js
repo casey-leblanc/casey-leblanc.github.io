@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const fileNames = {
         "current projects": "current-projects.html",
         "completed work": "completed-work.html",
-        "linkedin": "linkedin.html",
         "resume": "resume.html",
         "blog & about me": "blog.html"
     };

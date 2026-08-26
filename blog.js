@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Default post paths to check
     const postFiles = [
+        "posts/2026-08-26-post1.md",
+        "posts/2026-08-25-1.md",
         "posts/2026-08-23-building-my-website.md",
         "posts/2026-08-15-hello-world.md"
     ];
@@ -61,8 +63,41 @@ document.addEventListener("DOMContentLoaded", () => {
             return dateB - dateA;
         });
 
-        // Render posts to container
+        // Assign IDs after sorting
+        parsedPosts.forEach((post, index) => {
+            post.id = createPostSlug(post, index);
+        });
+
+        // Render posts and outline
         renderPosts(parsedPosts);
+        renderOutline(parsedPosts);
+        setupOutlineObserver();
+
+        // If URL has a hash, scroll smoothly to the post
+        if (window.location.hash) {
+            const targetId = window.location.hash.substring(1);
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                setTimeout(() => {
+                    targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+                    setActiveOutlineItem(targetId);
+                }, 150);
+            }
+        }
+    }
+
+    function createPostSlug(post, index) {
+        const cleanTitle = (post.title || "")
+            .replace(/[^a-z0-9]+/gi, "-")
+            .replace(/^-+|-+$/g, "")
+            .toLowerCase();
+        const cleanDate = (post.rawDate || "").replace(/[^a-z0-9]+/gi, "-").toLowerCase();
+        if (cleanDate && cleanTitle) {
+            return `post-${cleanDate}-${cleanTitle}`;
+        } else if (cleanTitle) {
+            return `post-${cleanTitle}`;
+        }
+        return `post-${index + 1}`;
     }
 
     function parseFrontmatter(text) {
@@ -178,6 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
         posts.forEach(post => {
             const entry = document.createElement("article");
             entry.className = "blog-entry";
+            entry.id = post.id;
 
             const header = document.createElement("div");
             header.className = "blog-entry-header";
@@ -202,6 +238,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
             postsContainer.appendChild(entry);
         });
+    }
+
+    function renderOutline(posts) {
+        const outlineContainer = document.getElementById("blog-outline");
+        if (!outlineContainer) return;
+
+        outlineContainer.innerHTML = "";
+
+        if (posts.length === 0) {
+            outlineContainer.innerHTML = `<span class="outline-empty">no posts found</span>`;
+            return;
+        }
+
+        posts.forEach((post, index) => {
+            const item = document.createElement("a");
+            item.href = `#${post.id}`;
+            item.className = "outline-item";
+            item.dataset.postId = post.id;
+            if (index === 0) item.classList.add("active");
+
+            const title = document.createElement("span");
+            title.className = "outline-item-title";
+            title.textContent = post.title;
+
+            const date = document.createElement("span");
+            date.className = "outline-item-date";
+            date.textContent = formatDate(post.date);
+
+            item.appendChild(title);
+            if (post.date && post.date !== "undated") {
+                item.appendChild(date);
+            }
+
+            item.addEventListener("click", (e) => {
+                e.preventDefault();
+                const target = document.getElementById(post.id);
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    history.pushState(null, "", `#${post.id}`);
+                    setActiveOutlineItem(post.id);
+                }
+            });
+
+            outlineContainer.appendChild(item);
+        });
+    }
+
+    function setActiveOutlineItem(postId) {
+        const items = document.querySelectorAll(".outline-item");
+        items.forEach(item => {
+            if (item.dataset.postId === postId) {
+                item.classList.add("active");
+            } else {
+                item.classList.remove("active");
+            }
+        });
+    }
+
+    function setupOutlineObserver() {
+        const entries = document.querySelectorAll(".blog-entry");
+        if (!entries.length || !("IntersectionObserver" in window)) return;
+
+        const observer = new IntersectionObserver((observedEntries) => {
+            observedEntries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveOutlineItem(entry.target.id);
+                }
+            });
+        }, {
+            rootMargin: "-10% 0px -70% 0px",
+            threshold: 0.05
+        });
+
+        entries.forEach(entry => observer.observe(entry));
     }
 });
 
