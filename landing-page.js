@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const subheading = document.querySelector(".subheadingDiv h2");
 
     const fileNames = {
-        "current projects": "current-projects.html",
-        "completed work": "completed-work.html",
-        "resume": "resume.html",
-        "blog & about me": "blog.html"
+        "current projects": "current-projects/",
+        "completed work": "completed-work/",
+        "resume": "resume/",
+        "blog & about me": "blog/"
     };
 
     if (introPlayed) {

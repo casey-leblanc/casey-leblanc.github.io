@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Default post paths to check
     const postFiles = [
-        "posts/2026-08-26-post1.md",
-        "posts/2026-08-25-1.md",
-        "posts/2026-08-23-building-my-website.md",
-        "posts/2026-08-15-hello-world.md"
+        "../posts/2026-08-26-post1.md",
+        "../posts/2026-08-25-1.md",
+        "../posts/2026-08-23-building-my-website.md",
+        "../posts/2026-08-15-hello-world.md"
     ];
 
 
@@ -20,9 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // Try fetching posts.json first, or fallback to postFiles list
             let fileList = postFiles;
             try {
-                const listRes = await fetch("posts/posts.json");
+                const listRes = await fetch("../posts/posts.json");
                 if (listRes.ok) {
-                    fileList = await listRes.json();
+                    const jsonList = await listRes.json();
+                    fileList = jsonList.map(file => file.startsWith("../") ? file : `../${file}`);
                 }
             } catch (e) {
                 // posts.json fetch failed, using default list
