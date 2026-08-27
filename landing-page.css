@@ -133,6 +133,12 @@ body::before {
     animation: fadeInLetter 1s forwards ease-out;
 }
 
+.resumeFrame {
+    height: 80vh;
+    width: 100%; 
+    
+}
+
 .separator {
     white-space: pre-wrap;
 }
