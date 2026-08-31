@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "current projects": "current-projects/",
         "completed work": "completed-work/",
         "resume": "resume/",
-        "blog & about me": "blog/"
+        "blog & contact": "blog/"
     };
 
     if (introPlayed) {

@@ -24,7 +24,6 @@ h1 {
     font-size: 300%;
     color: rgba(255, 255, 255, 0.6);
     font-weight: bold;
-    font-style: italic;
     margin: 0;
     text-align: center;
 }
@@ -40,6 +39,7 @@ h2 {
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 body {
@@ -53,7 +53,7 @@ body::before {
     left: -10px;
     right: -10px;
     bottom: -10px;
-    background-image: url("Assets/LandingBackground.jpg");
+    background-image: url("Assets/ForestSkyBackground.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -77,8 +77,8 @@ body::before {
 
 .frostedGlass {
     position: relative;
-    backdrop-filter: blur(5px);
-    background-color: #6c6c6c66;
+    backdrop-filter: blur(6px);
+    background-color: #6c6c6c95;
     outline: 2px solid rgba(255, 255, 255, 0.6);
     box-shadow: inset 3px 3px 6px rgba(255, 255, 255, 0.4), inset -3px -3px 6px rgba(0, 0, 0, 0.4);
     margin: 50px;
@@ -87,6 +87,7 @@ body::before {
     box-sizing: border-box;
     padding: 30px;
     border-radius: 10px;
+    overscroll-behavior: contain;
 }
 
 .return-button {
@@ -180,14 +181,15 @@ h2 a:hover {
 
 .blog-sidebar-right {
     flex: 0 0 260px;
-    position: sticky;
+    position: static;
     top: 30px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-height: calc(100vh - 60px);
+    max-height: 100%;
     overflow-y: auto;
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
 
@@ -217,9 +219,9 @@ h2 a:hover {
     font-size: 1.15rem;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.95);
-    margin: 0 0 12px 0;
+    margin: 0 0 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    padding-bottom: 8px;
+    padding-bottom: 4px;
     text-align: left;
 }
 
@@ -492,12 +494,14 @@ h2 a:hover {
     .blog-sidebar-right {
         flex: 1 1 100%;
         position: static;
+        overscroll-behavior: contain;
         max-height: none;
         flex-direction: row;
         gap: 20px;
     }
     .blog-sidebar-right .sidebar-panel {
         flex: 1;
+        overscroll-behavior: contain;
     }
 }
 
