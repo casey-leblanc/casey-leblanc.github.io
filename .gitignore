@@ -1,0 +1,21 @@
+# Markdown written by Claude or the design tooling stays local, not in the public repo.
+# (Your blog posts in posts/ are NOT ignored: they are tracked like everything else.)
+CLAUDE.md
+PRODUCT.md
+DESIGN.md
+.impeccable/**/*.md
+
+# Impeccable design-tool working files (screenshots, scratch state)
+.impeccable/live/
+.impeccable/review/
+.impeccable/build/
+.impeccable/mocks/
+
+# Misc
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# Claude Code skills and tool output stay local (a /hiring-panel run writes its resume review to .hiring-panel/)
+.claude/
+.hiring-panel/

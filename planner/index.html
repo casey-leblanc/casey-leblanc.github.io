@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course planner | Casey LeBlanc</title>
+    <meta name="description" content="A degree planner for LSU engineering students: drag courses into semesters, check prerequisites and track every requirement, even across a double major. A fork of Dr. Bruno Rego's planner.">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#060d09">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Casey LeBlanc">
+    <meta property="og:title" content="Course planner | Casey LeBlanc">
+    <meta property="og:description" content="A degree planner for LSU engineering students that checks prerequisites and tracks every requirement, even across a double major.">
+    <meta property="og:url" content="https://caseyleblanc.dev/planner/">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://caseyleblanc.dev/planner/">
+    <link rel="icon" href="../Assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="../Assets/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../site.css">
+    <script>
+        // motion.js prints the page in. It only runs when motion is allowed, and the page shows anyway if it never loads.
+        if (matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+            document.documentElement.classList.add("motion");
+            setTimeout(function () {
+                if (!document.documentElement.classList.contains("motion-ready")) document.documentElement.classList.remove("motion");
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="wordmark" href="../">
+                <svg class="mark" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="8.2"/><circle cx="10" cy="10" r="4.2"/><path d="M10 1.8 13.6 6.4M18.2 10 13.6 13.6M10 18.2 6.4 13.6M1.8 10 6.4 6.4"/></svg>
+                casey leblanc
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="../about/">about</a></li>
+                    <li><a href="../work/">work</a></li>
+                    <li><a href="../planner/" aria-current="page">planner</a></li>
+                    <li><a href="../blog/">blog</a></li>
+                    <li><a href="../resume/">resume</a></li>
+                    <li><a href="../about/#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="wrap">
+            <header class="page-head">
+                <h1 class="page-title">course planner</h1>
+                <p class="page-intro">Drag your courses into semesters and it checks prerequisites and tracks every requirement, even across a double major.</p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="https://caseyleblanc.dev/general-engineering-course-planner/" target="_blank" rel="noopener noreferrer">open the planner <span class="visually-hidden">(opens in a new tab)</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
+                    <a class="btn-link" href="https://github.com/casey-leblanc/general-engineering-course-planner" target="_blank" rel="noopener noreferrer">source on github <span class="visually-hidden">(opens in a new tab)</span></a>
+                </div>
+                <p class="page-note">It&#8217;s not an official degree audit, so check anything important with your advisor and the catalog.</p>
+            </header>
+
+            <figure class="planner-shot">
+                <img src="../Assets/planner/planner.webp" width="1440" height="900" alt="The course planner open on a Biological and Electrical Engineering double major: a progress panel for each program above a row of semester columns, each holding course tiles.">
+                <figcaption>The LSU Course Planner, opened on a BE + EE double major.</figcaption>
+            </figure>
+        </div>
+
+        <section class="section" id="what" aria-labelledby="what-title">
+            <div class="wrap section-grid">
+                <h2 class="section-title" id="what-title">what it does</h2>
+                <dl class="facts">
+                    <div class="fact"><dt>Checks</dt><dd>It checks prerequisites, corequisites and credit loads as you move courses around, and flags anything that breaks.</dd></div>
+                    <div class="fact"><dt>Programs</dt><dd>Biological Engineering, Electrical Engineering, five Computer Science tracks and the Robotics minor, in any combination, for the 2026-27 catalog.</dd></div>
+                    <div class="fact"><dt>Degree audit</dt><dd>Every requirement for each program and what counts toward it, including the advisor rules for double majors.</dd></div>
+                    <div class="fact"><dt>Auto-arrange</dt><dd>One button lays out everything you haven&#8217;t taken yet. It won&#8217;t break a prerequisite or put a class in a semester it isn&#8217;t offered, and it tries to keep your workload even. Under the hood it&#8217;s an integer program solved with HiGHS, right in your browser.</dd></div>
+                    <div class="fact"><dt>Sharing</dt><dd>Your plan saves in your browser and never goes to a server. Copy link puts the whole plan in a URL you can send to your advisor.</dd></div>
+                    <div class="fact"><dt>Data</dt><dd>Programs follow the College of Engineering flowcharts. Some courses aren&#8217;t verified against LSU&#8217;s data yet, and the planner tells you which.</dd></div>
+                </dl>
+            </div>
+        </section>
+
+        <section class="section" id="origin" aria-labelledby="origin-title">
+            <div class="wrap section-grid">
+                <h2 class="section-title" id="origin-title">where it came from</h2>
+                <div>
+                    <p class="statement">This started as <strong>Dr. Bruno Rego&#8217;s</strong> Biological Engineering course planner. I forked it so it works for other engineering majors too, and for people doing more than one major (like me).</p>
+                    <p class="page-note credit">Originally built for the College of Engineering by <a href="https://www.lsu.edu/eng/bae/people/faculty/bruno-rego.php" target="_blank" rel="noopener noreferrer">Dr. Bruno Rego<span class="visually-hidden"> (opens in a new tab)</span></a>. Extended to more engineering majors, and to double majors, by <a href="https://www.linkedin.com/in/casey-leblanc-04265731b/" target="_blank" rel="noopener noreferrer">Casey LeBlanc<span class="visually-hidden"> (opens in a new tab)</span></a>.</p>
+                    <ul class="link-list">
+                        <li><a href="https://caseyleblanc.dev/general-engineering-course-planner/" target="_blank" rel="noopener noreferrer">
+                            Open the planner <span class="visually-hidden">(opens in a new tab)</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a></li>
+                        <li><a href="https://caseyleblanc.dev/general-engineering-course-planner/documentation.html" target="_blank" rel="noopener noreferrer">
+                            Documentation <span class="visually-hidden">(opens in a new tab)</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a></li>
+                        <li><a href="https://github.com/casey-leblanc/general-engineering-course-planner" target="_blank" rel="noopener noreferrer">
+                            My fork on GitHub <span class="visually-hidden">(opens in a new tab)</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a></li>
+                        <li><a href="https://github.com/brunorego7/be-course-planner" target="_blank" rel="noopener noreferrer">
+                            Dr. Rego&#8217;s original <span class="visually-hidden">(opens in a new tab)</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Casey LeBlanc &middot; <a href="mailto:caseyleblanco06@gmail.com">caseyleblanco06@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/casey-leblanc-04265731b/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a> &middot; <a href="https://github.com/casey-leblanc" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+        </div>
+    </footer>
+    <script src="../motion.js" defer></script>
+</body>
+</html>

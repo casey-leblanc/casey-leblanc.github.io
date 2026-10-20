@@ -1,0 +1,431 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T17:36:33Z",
+  "title": "Design System: caseyleblanc.dev",
+  "extensions": {
+    "colorMeta": {
+      "signal": {
+        "role": "primary",
+        "displayName": "Phosphor Signal",
+        "canonical": "oklch(0.87 0.29 143)",
+        "tonalRamp": [
+          "oklch(0.15 0.29 143)",
+          "oklch(0.3 0.29 143)",
+          "oklch(0.45 0.29 143)",
+          "oklch(0.6 0.29 143)",
+          "oklch(0.72 0.29 143)",
+          "oklch(0.8 0.29 143)",
+          "oklch(0.87 0.29 143)",
+          "oklch(0.95 0.29 143)"
+        ]
+      },
+      "signal-strong": {
+        "role": "primary",
+        "displayName": "Signal Flare",
+        "canonical": "oklch(0.93 0.25 146)",
+        "tonalRamp": [
+          "oklch(0.15 0.25 146)",
+          "oklch(0.3 0.25 146)",
+          "oklch(0.45 0.25 146)",
+          "oklch(0.6 0.25 146)",
+          "oklch(0.72 0.25 146)",
+          "oklch(0.83 0.25 146)",
+          "oklch(0.93 0.25 146)",
+          "oklch(0.97 0.25 146)"
+        ]
+      },
+      "signal-dim": {
+        "role": "primary",
+        "displayName": "Signal Dim",
+        "canonical": "oklch(0.8 0.22 144)",
+        "tonalRamp": [
+          "oklch(0.15 0.22 144)",
+          "oklch(0.3 0.22 144)",
+          "oklch(0.45 0.22 144)",
+          "oklch(0.6 0.22 144)",
+          "oklch(0.7 0.22 144)",
+          "oklch(0.8 0.22 144)",
+          "oklch(0.88 0.22 144)",
+          "oklch(0.95 0.22 144)"
+        ]
+      },
+      "signal-ink": {
+        "role": "neutral",
+        "displayName": "Signal Ink",
+        "canonical": "oklch(0.14 0.04 150)",
+        "tonalRamp": [
+          "oklch(0.1 0.04 150)",
+          "oklch(0.14 0.04 150)",
+          "oklch(0.2 0.04 150)",
+          "oklch(0.3 0.04 150)",
+          "oklch(0.45 0.04 150)",
+          "oklch(0.6 0.04 150)",
+          "oklch(0.8 0.04 150)",
+          "oklch(0.95 0.04 150)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Spruce Black",
+        "canonical": "oklch(0.09 0.02 155)",
+        "tonalRamp": [
+          "oklch(0.05 0.02 155)",
+          "oklch(0.09 0.02 155)",
+          "oklch(0.14 0.02 155)",
+          "oklch(0.25 0.02 155)",
+          "oklch(0.4 0.02 155)",
+          "oklch(0.6 0.02 155)",
+          "oklch(0.8 0.02 155)",
+          "oklch(0.95 0.02 155)"
+        ]
+      },
+      "ground-raised": {
+        "role": "neutral",
+        "displayName": "Raised Spruce",
+        "canonical": "oklch(0.14 0.025 158)",
+        "tonalRamp": [
+          "oklch(0.07 0.025 158)",
+          "oklch(0.1 0.025 158)",
+          "oklch(0.14 0.025 158)",
+          "oklch(0.25 0.025 158)",
+          "oklch(0.4 0.025 158)",
+          "oklch(0.6 0.025 158)",
+          "oklch(0.8 0.025 158)",
+          "oklch(0.95 0.025 158)"
+        ]
+      },
+      "fog": {
+        "role": "neutral",
+        "displayName": "Fog White",
+        "canonical": "oklch(0.965 0.018 150)",
+        "tonalRamp": [
+          "oklch(0.15 0.018 150)",
+          "oklch(0.3 0.018 150)",
+          "oklch(0.45 0.018 150)",
+          "oklch(0.6 0.018 150)",
+          "oklch(0.72 0.018 150)",
+          "oklch(0.83 0.018 150)",
+          "oklch(0.9 0.018 150)",
+          "oklch(0.965 0.018 150)"
+        ]
+      },
+      "fog-2": {
+        "role": "neutral",
+        "displayName": "Fog Two",
+        "canonical": "oklch(0.87 0.03 150)",
+        "tonalRamp": [
+          "oklch(0.15 0.03 150)",
+          "oklch(0.3 0.03 150)",
+          "oklch(0.45 0.03 150)",
+          "oklch(0.6 0.03 150)",
+          "oklch(0.72 0.03 150)",
+          "oklch(0.8 0.03 150)",
+          "oklch(0.87 0.03 150)",
+          "oklch(0.95 0.03 150)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(0.88 0.2 143 / 0.18)",
+        "tonalRamp": [
+          "oklch(0.88 0.2 143 / 0.04)",
+          "oklch(0.88 0.2 143 / 0.08)",
+          "oklch(0.88 0.2 143 / 0.12)",
+          "oklch(0.88 0.2 143 / 0.18)",
+          "oklch(0.88 0.2 143 / 0.26)",
+          "oklch(0.88 0.2 143 / 0.34)",
+          "oklch(0.88 0.2 143 / 0.42)",
+          "oklch(0.88 0.2 143 / 0.6)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "oklch(0.88 0.22 143 / 0.42)",
+        "tonalRamp": [
+          "oklch(0.88 0.22 143 / 0.08)",
+          "oklch(0.88 0.22 143 / 0.16)",
+          "oklch(0.88 0.22 143 / 0.24)",
+          "oklch(0.88 0.22 143 / 0.32)",
+          "oklch(0.88 0.22 143 / 0.42)",
+          "oklch(0.88 0.22 143 / 0.55)",
+          "oklch(0.88 0.22 143 / 0.7)",
+          "oklch(0.88 0.22 143 / 0.85)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name in the ring's hole on the home, lowercase, fog-white, sized to the hole."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section and page titles, lowercase, signal green."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Row titles and group titles, bold."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text and statements (the about statement is lowercase, through CSS); blog prose steps up to 1.125rem at 68ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "HUD labels and data only: menu and nav labels, the bottom edge, dates, tags, inline code."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-drop",
+        "value": "inset 0 1px 0 oklch(1 0 0 / 0.4), 0 10px 22px -10px oklch(0.03 0.02 160 / 0.9)",
+        "purpose": "Soft dark drop under the primary button; deepens on hover. Never coloured."
+      },
+      {
+        "name": "frame-drop",
+        "value": "0 10px 14px -10px oklch(0.03 0.02 160 / 0.9)",
+        "purpose": "Quiet seat under the resume PDF frame and the planner screenshot."
+      },
+      {
+        "name": "canvas-bloom",
+        "value": "additive compositing ('lighter') of the ring's hairlines in the canvas",
+        "purpose": "The only glow in the system; it lives inside the ring, never in CSS."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Button lift, label slide, arrow nudge."
+      },
+      {
+        "name": "state-fast",
+        "value": "0.2s",
+        "purpose": "Colour, fill and underline transitions on hover."
+      },
+      {
+        "name": "ring-intro",
+        "value": "1.6s clockwise draw-in",
+        "purpose": "The weave and the dial draw themselves in on load."
+      },
+      {
+        "name": "ring-exit",
+        "value": "0.56s unravel on the canvas: inner corners spin and pull in, strings let go in a shuffled order, the dial spins away; the name's letters scatter and the labels slide off",
+        "purpose": "Choosing a label unravels the ring before the next page loads (after lhbzr.com)."
+      },
+      {
+        "name": "ring-breath",
+        "value": "0.045 rad/s turn with slow twist and spread drift",
+        "purpose": "The ring's idle motion; stopped by the motion toggle and by reduced motion."
+      },
+      {
+        "name": "ring-pacing",
+        "value": "30fps idle, up to 60fps while the pointer, a label or the intro moves it",
+        "purpose": "Keeps the ring smooth and light; a governor lowers resolution (2x, 1.5x, 1x), then frame rate, when frames arrive late."
+      },
+      {
+        "name": "ring-return",
+        "value": "0.9s, the exit in reverse: the ring weaves back together, the letters gather, the labels slide in; the page left recedes to 94% (to-menu view transition type)",
+        "purpose": "Coming back to the main menu from another page of the site."
+      },
+      {
+        "name": "page-leave",
+        "value": "0.22s, the old page lifts 14px and fades (cross-document view transition); the header holds still",
+        "purpose": "Moving between pages without a crossfade; the new page prints itself in."
+      },
+      {
+        "name": "print-in",
+        "value": "title wipe behind a 2px scan line (0.7s); words light up in reading order, signal-strong cooling to their colour (0.56s each); lists wipe in 70ms apart, capped at six",
+        "purpose": "Inner pages arrive like a readout; section rules draw out from their tick (1.2s) as they scroll in."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "No view transition, a still ring, a still wave, no toggle."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "nav-grid",
+        "value": "359px (max) : the six nav labels become a 3 x 2 grid"
+      },
+      {
+        "name": "nav-phone",
+        "value": "479px (max) : nav labels tighten to 0.78rem to stay on one row"
+      },
+      {
+        "name": "header-sticky",
+        "value": "720px (and at least 520px tall)"
+      },
+      {
+        "name": "rows",
+        "value": "760px"
+      },
+      {
+        "name": "home-stack",
+        "value": "819px (max) or 560px tall (max) : the home becomes one column: ring on top, name inside, then labels, bottom edge"
+      },
+      {
+        "name": "section-rail",
+        "value": "900px"
+      },
+      {
+        "name": "resume-split",
+        "value": "1000px : PDF frame up to 52rem beside a summary rail of 16rem to 24rem (touch devices drop the frame)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled phosphor button with a trailing arrow; the one primary action per view.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">view resume <svg class=\"ds-arrow\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5l5 5-5 5\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 0.65rem; min-height: 3rem; padding: 0.7rem 1.4rem; border-radius: 4px; background: var(--signal, oklch(0.87 0.29 143)); color: var(--signal-ink, oklch(0.14 0.04 150)); font-size: 1.0625rem; font-weight: 700; text-decoration: none; box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.4), 0 10px 22px -10px oklch(0.03 0.02 160 / 0.9); transition: background-color 0.2s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: var(--signal-strong, oklch(0.93 0.25 146)); transform: translateY(-2px); } .ds-btn-primary:active { transform: translateY(0); } .ds-btn-primary:focus-visible { outline: 3px solid var(--signal, oklch(0.87 0.29 143)); outline-offset: 3px; } .ds-arrow { width: 1.15em; height: 1.15em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }"
+    },
+    {
+      "name": "Link Button",
+      "kind": "button",
+      "refersTo": "nav-link",
+      "description": "Bold text link with a strong-hairline underline that lights to signal on hover; the quiet second action.",
+      "html": "<a class=\"ds-btn-link\" href=\"#\">email me</a>",
+      "css": ".ds-btn-link { display: inline-flex; align-items: center; min-height: 44px; color: oklch(0.965 0.018 150); font-weight: 700; text-decoration: underline; text-decoration-color: oklch(0.88 0.22 143 / 0.42); text-decoration-thickness: 2px; text-underline-offset: 0.35em; transition: text-decoration-color 0.2s, color 0.2s; } .ds-btn-link:hover { color: var(--signal, oklch(0.87 0.29 143)); text-decoration-color: var(--signal, oklch(0.87 0.29 143)); } .ds-btn-link:focus-visible { outline: 3px solid var(--signal, oklch(0.87 0.29 143)); outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Ring Menu",
+      "kind": "custom",
+      "refersTo": "menu-label",
+      "description": "Signature component: the home's woven string-art ring (a still frame of the canvas) with the name alone in its hole and a bracket label each side. Live, it breathes, bends toward the pointer, lights the side facing a hovered label and unravels before the next page.",
+      "html": "<div class=\"ds-ring\"><svg class=\"ds-ring-svg\" viewBox=\"-100 -100 200 200\" aria-hidden=\"true\" focusable=\"false\"><path class=\"ds-weave\" d=\"M22.4 -36.6L-39.4 -77.5L39.4 -77.5ZM24.2 -35.4L-35.5 -79.3L43.2 -75.4ZM25.9 -34.2L-31.6 -80.9L46.7 -73.2ZM27.6 -33L-27.5 -82.2L50.2 -70.6ZM29.2 -31.6L-23.4 -83.2L53.5 -67.9ZM30.8 -30.2L-19.2 -84L56.6 -65ZM32.3 -28.7L-15 -84.5L59.5 -61.9ZM33.7 -27.1L-10.8 -84.8L62.2 -58.7ZM35.1 -25.5L-6.6 -84.9L64.7 -55.3ZM36.4 -23.8L-2.4 -84.7L67 -51.8ZM37.6 -22L1.7 -84.3L69.1 -48.2ZM38.8 -20.2L5.8 -83.7L71 -44.6ZM39.8 -18.3L9.9 -82.8L72.8 -40.8ZM40.8 -16.4L13.9 -81.8L74.3 -37ZM41.6 -14.4L17.8 -80.7L75.7 -33.2ZM42.4 -12.4L21.6 -79.4L76.9 -29.3ZM43 -10.3L25.4 -77.9L77.9 -25.4ZM43.5 -8.2L29.1 -76.3L78.8 -21.4ZM43.9 -6.1L32.7 -74.6L79.5 -17.5ZM44.2 -3.9L36.2 -72.7L80.1 -13.6ZM44.4 -1.7L39.7 -70.7L80.5 -9.6ZM44.4 0.4L43.1 -68.7L80.9 -5.6ZM44.4 2.6L46.4 -66.5L81.1 -1.7ZM44.2 4.8L49.7 -64.2L81.1 2.3ZM43.8 7L52.8 -61.8L81 6.3ZM43.4 9.1L55.9 -59.2L80.8 10.3ZM42.8 11.2L59 -56.6L80.5 14.3ZM42.2 13.3L61.9 -53.8L80 18.3ZM41.4 15.3L64.7 -50.9L79.3 22.3ZM40.5 17.2L67.5 -47.9L78.5 26.3ZM39.5 19.2L70.1 -44.8L77.5 30.2ZM38.4 21L72.5 -41.5L76.3 34.2ZM37.2 22.8L74.9 -38.1L74.9 38.1ZM36 24.6L77 -34.5L73.3 41.9ZM34.6 26.2L79 -30.9L71.5 45.7ZM33.2 27.8L80.8 -27.1L69.5 49.4ZM31.8 29.4L82.4 -23.2L67.3 53ZM30.2 30.8L83.8 -19.2L64.9 56.4ZM28.6 32.2L84.9 -15.1L62.2 59.7ZM27 33.5L85.8 -10.9L59.4 62.9ZM25.3 34.8L86.5 -6.7L56.4 65.9ZM23.5 35.9L86.8 -2.5L53.1 68.7ZM21.7 37L86.9 1.8L49.8 71.3ZM19.8 38.1L86.7 6L46.2 73.6ZM18 39L86.3 10.3L42.5 75.8ZM16 39.9L85.6 14.5L38.7 77.7ZM14.1 40.6L84.6 18.6L34.8 79.3ZM12.1 41.3L83.3 22.7L30.7 80.7ZM10.1 41.9L81.8 26.7L26.7 81.8ZM8 42.5L80.1 30.5L22.5 82.7ZM5.9 42.9L78.2 34.3L18.4 83.4ZM3.8 43.3L76.1 37.9L14.2 83.8ZM1.7 43.5L73.8 41.4L10 84ZM-0.4 43.6L71.3 44.7L5.8 83.9ZM-2.6 43.7L68.6 47.9L1.7 83.7ZM-4.7 43.6L65.9 51L-2.4 83.3ZM-6.9 43.4L63 53.9L-6.4 82.6ZM-9 43.1L60 56.6L-10.4 81.8ZM-11.2 42.7L56.9 59.2L-14.4 80.9ZM-13.3 42.2L53.7 61.7L-18.3 79.8ZM-15.3 41.6L50.4 64.1L-22.1 78.5ZM-17.4 40.8L47.1 66.3L-25.8 77.1ZM-19.4 40L43.7 68.4L-29.5 75.6ZM-21.3 39L40.3 70.4L-33.2 74ZM-23.2 37.9L36.7 72.3L-36.7 72.3ZM-25.1 36.7L33.2 74L-40.3 70.4ZM-26.8 35.4L29.5 75.6L-43.7 68.4ZM-28.5 34L25.8 77.1L-47.1 66.3ZM-30.1 32.5L22.1 78.5L-50.4 64.1ZM-31.6 31L18.3 79.8L-53.7 61.7ZM-33 29.3L14.4 80.9L-56.9 59.2ZM-34.3 27.6L10.4 81.8L-60 56.6ZM-35.6 25.8L6.4 82.6L-63 53.9ZM-36.7 24L2.4 83.3L-65.9 51ZM-37.8 22.1L-1.7 83.7L-68.6 47.9ZM-38.7 20.2L-5.8 83.9L-71.3 44.7ZM-39.5 18.2L-10 84L-73.8 41.4ZM-40.3 16.2L-14.2 83.8L-76.1 37.9ZM-40.9 14.2L-18.4 83.4L-78.2 34.3ZM-41.5 12.1L-22.5 82.7L-80.1 30.5ZM-41.9 10.1L-26.7 81.8L-81.8 26.7ZM-42.3 8L-30.7 80.7L-83.3 22.7ZM-42.6 5.9L-34.8 79.3L-84.6 18.6ZM-42.8 3.8L-38.7 77.7L-85.6 14.5ZM-42.9 1.7L-42.5 75.8L-86.3 10.3ZM-42.9 -0.4L-46.2 73.6L-86.7 6ZM-42.8 -2.5L-49.8 71.3L-86.9 1.8ZM-42.7 -4.6L-53.1 68.7L-86.8 -2.5ZM-42.4 -6.7L-56.4 65.9L-86.5 -6.7ZM-42.1 -8.8L-59.4 62.9L-85.8 -10.9ZM-41.7 -10.9L-62.2 59.7L-84.9 -15.1ZM-41.2 -12.9L-64.9 56.4L-83.8 -19.2ZM-40.6 -15L-67.3 53L-82.4 -23.2ZM-39.9 -17L-69.5 49.4L-80.8 -27.1ZM-39.1 -19L-71.5 45.7L-79 -30.9ZM-38.2 -20.9L-73.3 41.9L-77 -34.5ZM-37.2 -22.8L-74.9 38.1L-74.9 -38.1ZM-36.2 -24.7L-76.3 34.2L-72.5 -41.5ZM-35 -26.5L-77.5 30.2L-70.1 -44.8ZM-33.7 -28.3L-78.5 26.3L-67.5 -47.9ZM-32.4 -29.9L-79.3 22.3L-64.7 -50.9ZM-30.9 -31.6L-80 18.3L-61.9 -53.8ZM-29.4 -33.1L-80.5 14.3L-59 -56.6ZM-27.8 -34.6L-80.8 10.3L-55.9 -59.2ZM-26.1 -35.9L-81 6.3L-52.8 -61.8ZM-24.3 -37.2L-81.1 2.3L-49.7 -64.2ZM-22.5 -38.3L-81.1 -1.7L-46.4 -66.5ZM-20.6 -39.4L-80.9 -5.6L-43.1 -68.7ZM-18.6 -40.4L-80.5 -9.6L-39.7 -70.7ZM-16.6 -41.2L-80.1 -13.6L-36.2 -72.7ZM-14.5 -41.9L-79.5 -17.5L-32.7 -74.6ZM-12.4 -42.5L-78.8 -21.4L-29.1 -76.3ZM-10.3 -43L-77.9 -25.4L-25.4 -77.9ZM-8.2 -43.4L-76.9 -29.3L-21.6 -79.4ZM-6 -43.6L-75.7 -33.2L-17.8 -80.7ZM-3.9 -43.8L-74.3 -37L-13.9 -81.8ZM-1.7 -43.8L-72.8 -40.8L-9.9 -82.8ZM0.4 -43.7L-71 -44.6L-5.8 -83.7ZM2.6 -43.5L-69.1 -48.2L-1.7 -84.3ZM4.7 -43.2L-67 -51.8L2.4 -84.7ZM6.8 -42.9L-64.7 -55.3L6.6 -84.9ZM8.9 -42.4L-62.2 -58.7L10.8 -84.8ZM10.9 -41.8L-59.5 -61.9L15 -84.5ZM12.9 -41.1L-56.6 -65L19.2 -84ZM14.9 -40.4L-53.5 -67.9L23.4 -83.2ZM16.8 -39.5L-50.2 -70.6L27.5 -82.2ZM18.8 -38.6L-46.7 -73.2L31.6 -80.9ZM20.6 -37.7L-43.2 -75.4L35.5 -79.3Z\"/><path class=\"ds-tick\" d=\"M89.8 4.7L93.2 4.9M89.4 9.4L92.8 9.8M88.8 14.1L92.1 14.6M87.9 18.7L91.2 19.4M86.8 23.3L90.1 24.1M85.5 27.8L88.7 28.8M83.9 32.2L87.1 33.4M82.1 36.6L85.2 37.9M80.1 40.8L83.1 42.3M75.4 49L78.2 50.8M72.7 52.8L75.5 54.8M69.8 56.6L72.5 58.7M66.8 60.1L69.3 62.4M63.6 63.6L66 66M60.1 66.8L62.4 69.3M56.6 69.8L58.7 72.5M52.8 72.7L54.8 75.5M49 75.4L50.8 78.2M40.8 80.1L42.3 83.1M36.6 82.1L37.9 85.2M32.2 83.9L33.4 87.1M27.8 85.5L28.8 88.7M23.3 86.8L24.1 90.1M18.7 87.9L19.4 91.2M14.1 88.8L14.6 92.1M9.4 89.4L9.8 92.8M4.7 89.8L4.9 93.2M-4.7 89.8L-4.9 93.2M-9.4 89.4L-9.8 92.8M-14.1 88.8L-14.6 92.1M-18.7 87.9L-19.4 91.2M-23.3 86.8L-24.1 90.1M-27.8 85.5L-28.8 88.7M-32.2 83.9L-33.4 87.1M-36.6 82.1L-37.9 85.2M-40.8 80.1L-42.3 83.1M-49 75.4L-50.8 78.2M-52.8 72.7L-54.8 75.5M-56.6 69.8L-58.7 72.5M-60.1 66.8L-62.4 69.3M-63.6 63.6L-66 66M-66.8 60.1L-69.3 62.4M-69.8 56.6L-72.5 58.7M-72.7 52.8L-75.5 54.8M-75.4 49L-78.2 50.8M-80.1 40.8L-83.1 42.3M-82.1 36.6L-85.2 37.9M-83.9 32.2L-87.1 33.4M-85.5 27.8L-88.7 28.8M-86.8 23.3L-90.1 24.1M-87.9 18.7L-91.2 19.4M-88.8 14.1L-92.1 14.6M-89.4 9.4L-92.8 9.8M-89.8 4.7L-93.2 4.9M-89.8 -4.7L-93.2 -4.9M-89.4 -9.4L-92.8 -9.8M-88.8 -14.1L-92.1 -14.6M-87.9 -18.7L-91.2 -19.4M-86.8 -23.3L-90.1 -24.1M-85.5 -27.8L-88.7 -28.8M-83.9 -32.2L-87.1 -33.4M-82.1 -36.6L-85.2 -37.9M-80.1 -40.8L-83.1 -42.3M-75.4 -49L-78.2 -50.8M-72.7 -52.8L-75.5 -54.8M-69.8 -56.6L-72.5 -58.7M-66.8 -60.1L-69.3 -62.4M-63.6 -63.6L-66 -66M-60.1 -66.8L-62.4 -69.3M-56.6 -69.8L-58.7 -72.5M-52.8 -72.7L-54.8 -75.5M-49 -75.4L-50.8 -78.2M-40.8 -80.1L-42.3 -83.1M-36.6 -82.1L-37.9 -85.2M-32.2 -83.9L-33.4 -87.1M-27.8 -85.5L-28.8 -88.7M-23.3 -86.8L-24.1 -90.1M-18.7 -87.9L-19.4 -91.2M-14.1 -88.8L-14.6 -92.1M-9.4 -89.4L-9.8 -92.8M-4.7 -89.8L-4.9 -93.2M4.7 -89.8L4.9 -93.2M9.4 -89.4L9.8 -92.8M14.1 -88.8L14.6 -92.1M18.7 -87.9L19.4 -91.2M23.3 -86.8L24.1 -90.1M27.8 -85.5L28.8 -88.7M32.2 -83.9L33.4 -87.1M36.6 -82.1L37.9 -85.2M40.8 -80.1L42.3 -83.1M49 -75.4L50.8 -78.2M52.8 -72.7L54.8 -75.5M56.6 -69.8L58.7 -72.5M60.1 -66.8L62.4 -69.3M63.6 -63.6L66 -66M66.8 -60.1L69.3 -62.4M69.8 -56.6L72.5 -58.7M72.7 -52.8L75.5 -54.8M75.4 -49L78.2 -50.8M80.1 -40.8L83.1 -42.3M82.1 -36.6L85.2 -37.9M83.9 -32.2L87.1 -33.4M85.5 -27.8L88.7 -28.8M86.8 -23.3L90.1 -24.1M87.9 -18.7L91.2 -19.4M88.8 -14.1L92.1 -14.6M89.4 -9.4L92.8 -9.8M89.8 -4.7L93.2 -4.9\"/><path class=\"ds-tick ds-tick-major\" d=\"M89.9 0L97.4 0M77.8 44.9L84.3 48.7M44.9 77.8L48.7 84.3M0 89.9L0 97.4M-44.9 77.8L-48.7 84.3M-77.8 44.9L-84.3 48.7M-89.9 0L-97.4 0M-77.8 -44.9L-84.3 -48.7M-44.9 -77.8L-48.7 -84.3M0 -89.9L0 -97.4M44.9 -77.8L48.7 -84.3M77.8 -44.9L84.3 -48.7\"/><circle class=\"ds-hole\" r=\"40.6\"/></svg><div class=\"ds-who\"><p class=\"ds-name\">casey leblanc</p></div><a class=\"ds-label ds-left\" href=\"#\"><svg class=\"ds-frame\" viewBox=\"0 0 200 48\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path class=\"ds-frame-fill\" d=\"M2 6H168L196 24L168 42H2Z\"/><path class=\"ds-frame-line\" d=\"M2 12V6H168L196 24L168 42H2V36\"/></svg><span>about</span></a><a class=\"ds-label ds-right ds-primary\" href=\"#\"><svg class=\"ds-frame\" viewBox=\"0 0 200 48\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path class=\"ds-frame-fill\" d=\"M2 6H168L196 24L168 42H2Z\"/><path class=\"ds-frame-line\" d=\"M2 12V6H168L196 24L168 42H2V36\"/></svg><span>resume</span></a></div>",
+      "css": ".ds-ring { position: relative; display: grid; grid-template-columns: 11rem 1fr 11rem; align-items: center; gap: 1rem; width: 100%; max-width: 760px; min-height: 420px; padding: 1rem; background: oklch(0.09 0.02 155); background-image: radial-gradient(circle at center, oklch(0.88 0.2 143 / 0.2) 0 1px, transparent 1.6px); background-size: 28px 28px; } .ds-ring-svg { position: absolute; left: 50%; top: 50%; width: 420px; max-width: none; transform: translate(-50%, -50%); } .ds-weave, .ds-tick, .ds-hole { fill: none; stroke: var(--signal, oklch(0.87 0.29 143)); vector-effect: non-scaling-stroke; } .ds-weave { stroke-opacity: 0.3; } .ds-tick { stroke-opacity: 0.28; } .ds-tick-major { stroke-opacity: 0.55; } .ds-hole { stroke-opacity: 0.16; } .ds-who { position: relative; grid-column: 2; text-align: center; } .ds-name { margin: 0; color: oklch(0.965 0.018 150); font: 700 2.6rem/0.92 AtkinsonHyperlegible, system-ui, sans-serif; letter-spacing: -0.03em; } .ds-ring .ds-left { grid-column: 1; grid-row: 1; } .ds-ring .ds-right { grid-column: 3; grid-row: 1; } .ds-ring .ds-right:hover, .ds-ring .ds-right:focus-visible { transform: translateX(-6px); } .ds-label { position: relative; display: flex; align-items: center; justify-content: center; width: 11rem; height: 3rem; color: oklch(0.965 0.018 150); font-family: ui-monospace, \"Cascadia Mono\", Menlo, Consolas, monospace; font-size: 0.95rem; letter-spacing: 0.08em; text-decoration: none; text-transform: lowercase; transition: color 0.2s, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); } .ds-label span { position: relative; } .ds-frame { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; } .ds-label.ds-right .ds-frame { transform: scaleX(-1); } .ds-frame-fill { fill: transparent; transition: fill 0.25s; } .ds-frame-line { fill: none; stroke: var(--signal, oklch(0.87 0.29 143)); stroke-opacity: 0.55; stroke-width: 1.25; vector-effect: non-scaling-stroke; transition: stroke-opacity 0.25s; } .ds-label:hover, .ds-label:focus-visible { color: var(--signal, oklch(0.87 0.29 143)); transform: translateX(6px); } .ds-label:hover .ds-frame-fill, .ds-label:focus-visible .ds-frame-fill { fill: oklch(0.87 0.29 143 / 0.1); } .ds-label:hover .ds-frame-line, .ds-label:focus-visible .ds-frame-line { stroke-opacity: 1; } .ds-label.ds-primary { color: var(--signal-ink, oklch(0.14 0.04 150)); font-weight: 700; } .ds-label.ds-primary .ds-frame-fill { fill: var(--signal, oklch(0.87 0.29 143)); } .ds-label.ds-primary .ds-frame-line { stroke-opacity: 1; } .ds-label.ds-primary:hover .ds-frame-fill { fill: var(--signal-strong, oklch(0.93 0.25 146)); } .ds-label:focus-visible { outline: 3px solid var(--signal, oklch(0.87 0.29 143)); outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Menu Label",
+      "kind": "button",
+      "refersTo": "menu-label",
+      "description": "A bracket frame with an open outer end and a point aimed at the ring; mono lowercase text; resume is the one filled label.",
+      "html": "<div style=\"display:flex;gap:1rem\"><a class=\"ds-label\" href=\"#\"><svg class=\"ds-frame\" viewBox=\"0 0 200 48\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path class=\"ds-frame-fill\" d=\"M2 6H168L196 24L168 42H2Z\"/><path class=\"ds-frame-line\" d=\"M2 12V6H168L196 24L168 42H2V36\"/></svg><span>about</span></a><a class=\"ds-label ds-right ds-primary\" href=\"#\"><svg class=\"ds-frame\" viewBox=\"0 0 200 48\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path class=\"ds-frame-fill\" d=\"M2 6H168L196 24L168 42H2Z\"/><path class=\"ds-frame-line\" d=\"M2 12V6H168L196 24L168 42H2V36\"/></svg><span>resume</span></a></div>",
+      "css": ".ds-label { position: relative; display: flex; align-items: center; justify-content: center; width: 11rem; height: 3rem; color: oklch(0.965 0.018 150); font-family: ui-monospace, \"Cascadia Mono\", Menlo, Consolas, monospace; font-size: 0.95rem; letter-spacing: 0.08em; text-decoration: none; text-transform: lowercase; transition: color 0.2s, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1); } .ds-label span { position: relative; } .ds-frame { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; } .ds-label.ds-right .ds-frame { transform: scaleX(-1); } .ds-frame-fill { fill: transparent; transition: fill 0.25s; } .ds-frame-line { fill: none; stroke: var(--signal, oklch(0.87 0.29 143)); stroke-opacity: 0.55; stroke-width: 1.25; vector-effect: non-scaling-stroke; transition: stroke-opacity 0.25s; } .ds-label:hover, .ds-label:focus-visible { color: var(--signal, oklch(0.87 0.29 143)); transform: translateX(6px); } .ds-label:hover .ds-frame-fill, .ds-label:focus-visible .ds-frame-fill { fill: oklch(0.87 0.29 143 / 0.1); } .ds-label:hover .ds-frame-line, .ds-label:focus-visible .ds-frame-line { stroke-opacity: 1; } .ds-label.ds-primary { color: var(--signal-ink, oklch(0.14 0.04 150)); font-weight: 700; } .ds-label.ds-primary .ds-frame-fill { fill: var(--signal, oklch(0.87 0.29 143)); } .ds-label.ds-primary .ds-frame-line { stroke-opacity: 1; } .ds-label.ds-primary:hover .ds-frame-fill { fill: var(--signal-strong, oklch(0.93 0.25 146)); } .ds-label:focus-visible { outline: 3px solid var(--signal, oklch(0.87 0.29 143)); outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Inner-page nav: six mono lowercase labels in fog-2; hover draws faint brackets, the current page is signal with solid brackets.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">about</a><a href=\"#\" aria-current=\"page\">work</a><a href=\"#\">planner</a><a href=\"#\">blog</a><a href=\"#\">resume</a><a href=\"#\">contact</a></nav>",
+      "css": ".ds-nav { display: flex; flex-wrap: wrap; gap: 0 0.5rem; } .ds-nav a { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding-inline: 0.75rem; color: oklch(0.87 0.03 150); font-family: ui-monospace, \"Cascadia Mono\", Menlo, Consolas, monospace; font-size: 0.875rem; letter-spacing: 0.04em; text-decoration: none; text-transform: lowercase; transition: color 0.2s; } .ds-nav a::before, .ds-nav a::after { content: ''; position: absolute; top: 11px; bottom: 11px; width: 6px; border: 1.5px solid var(--signal, oklch(0.87 0.29 143)); opacity: 0; transition: opacity 0.2s; } .ds-nav a::before { left: 0; border-right: 0; } .ds-nav a::after { right: 0; border-left: 0; } .ds-nav a:hover, .ds-nav a[aria-current='page'] { color: var(--signal, oklch(0.87 0.29 143)); } .ds-nav a:hover::before, .ds-nav a:hover::after { opacity: 0.5; } .ds-nav a[aria-current='page']::before, .ds-nav a[aria-current='page']::after { opacity: 1; } .ds-nav a:focus-visible { outline: 3px solid var(--signal, oklch(0.87 0.29 143)); outline-offset: 3px; border-radius: 4px; } @media (max-width: 479px) { .ds-nav a { padding-inline: 0.4rem; font-size: 0.78rem; } }"
+    },
+    {
+      "name": "Motion Toggle",
+      "kind": "button",
+      "refersTo": "motion-toggle",
+      "description": "Bottom-left of the home: stops or resumes the ring, remembered between visits; hidden under reduced motion.",
+      "html": "<button class=\"ds-toggle\" type=\"button\">pause motion</button>",
+      "css": ".ds-toggle { min-height: 44px; padding: 0 0.9rem; border: 1px solid oklch(0.88 0.22 143 / 0.42); border-radius: 4px; background: oklch(0.09 0.02 155 / 0.6); color: oklch(0.87 0.03 150); font-family: ui-monospace, \"Cascadia Mono\", Menlo, Consolas, monospace; font-size: 0.78rem; letter-spacing: 0.02em; cursor: pointer; transition: color 0.2s, border-color 0.2s; } .ds-toggle:hover { border-color: var(--signal, oklch(0.87 0.29 143)); color: var(--signal, oklch(0.87 0.29 143)); } .ds-toggle:focus-visible { outline: 3px solid var(--signal, oklch(0.87 0.29 143)); outline-offset: 3px; }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Mono pill in signal-dim with a strong-hairline border; labels kind of work or marks an idea as an idea.",
+      "html": "<span class=\"ds-tag\">research</span>",
+      "css": ".ds-tag { display: inline-block; padding: 0.1rem 0.75rem; border: 1px solid oklch(0.88 0.22 143 / 0.42); border-radius: 999px; color: var(--signal-dim, oklch(0.8 0.22 144)); font-family: ui-monospace, monospace; font-size: 0.875rem; white-space: nowrap; }"
+    },
+    {
+      "name": "Ruled Row",
+      "kind": "card",
+      "refersTo": "outline-link",
+      "description": "The page's list pattern instead of cards: hairlines, a mono date, a bold title, fog-2 text, and a faint signal wash on hover.",
+      "html": "<a class=\"ds-row\" href=\"#\"><time>2026-08-31</time><span class=\"ds-row-main\"><span class=\"ds-row-title\">Blog post title</span><span class=\"ds-row-text\">One line of summary text.</span></span></a>",
+      "css": ".ds-row { display: grid; grid-template-columns: 10.5rem minmax(0, 1fr); gap: 0.35rem 2rem; align-items: baseline; padding: 1.35rem 0.5rem; border-top: 1px solid oklch(0.88 0.2 143 / 0.18); border-bottom: 1px solid oklch(0.88 0.2 143 / 0.18); border-radius: 4px; color: oklch(0.965 0.018 150); text-decoration: none; transition: background-color 0.2s; } .ds-row:hover { background: oklch(0.88 0.2 143 / 0.07); } .ds-row time { color: var(--signal-dim, oklch(0.8 0.22 144)); font-family: ui-monospace, monospace; font-size: 0.875rem; } .ds-row-main { display: grid; gap: 0.3rem; } .ds-row-title { font-size: 1.25rem; font-weight: 700; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 2px; text-underline-offset: 0.25em; transition: text-decoration-color 0.2s; } .ds-row:hover .ds-row-title { text-decoration-color: var(--signal, oklch(0.87 0.29 143)); } .ds-row-text { color: oklch(0.87 0.03 150); } .ds-row:focus-visible { outline: 3px solid var(--signal, oklch(0.87 0.29 143)); outline-offset: 3px; }"
+    },
+    {
+      "name": "Fact List",
+      "kind": "custom",
+      "refersTo": "tag",
+      "description": "Ruled definition list; terms are Atkinson bold in signal-dim, never mono.",
+      "html": "<dl class=\"ds-facts\"><div class=\"ds-fact\"><dt>focus</dt><dd>Wearable computing and brain-computer interfaces.</dd></div></dl>",
+      "css": ".ds-facts { margin: 0; max-width: 46rem; } .ds-fact { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 0.2rem 2rem; padding-block: 1rem; border-top: 1px solid oklch(0.88 0.2 143 / 0.18); border-bottom: 1px solid oklch(0.88 0.2 143 / 0.18); } .ds-fact dt { color: var(--signal-dim, oklch(0.8 0.22 144)); font-weight: 700; text-transform: lowercase; } .ds-fact dd { margin: 0; color: oklch(0.965 0.018 150); }"
+    },
+    {
+      "name": "Work Row With Links",
+      "kind": "custom",
+      "refersTo": "tag",
+      "description": "A work row that carries its own two links instead of one link around the row: hairlines, a bold title, a fog-2 description, the links, and a mono tag. Used by the course planner row.",
+      "html": "<div class=\"ds-work\"><h4 class=\"ds-work-title\">General Engineering Course Planner</h4><div class=\"ds-work-body\"><p class=\"ds-work-text\">A degree planner for LSU engineering students. Drag courses into semesters and it checks prerequisites and tracks every requirement, even across a double major.</p><p class=\"ds-work-links\"><a class=\"ds-link\" href=\"#\">open the planner <svg class=\"ds-arrow\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5l5 5-5 5\"/></svg></a><a class=\"ds-link\" href=\"#\">how it works <svg class=\"ds-arrow\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11M11 5l5 5-5 5\"/></svg></a></p></div><span class=\"ds-tag\">web app</span></div>",
+      "css": ".ds-work { display: grid; grid-template-columns: 14rem minmax(0, 1fr) auto; gap: 0.4rem 2rem; align-items: baseline; padding-block: 1.35rem; border-top: 1px solid oklch(0.88 0.2 143 / 0.18); border-bottom: 1px solid oklch(0.88 0.2 143 / 0.18); color: oklch(0.965 0.018 150); } .ds-work-title { margin: 0; font-size: 1.25rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.01em; } .ds-work-body { display: grid; gap: 0.35rem; } .ds-work-text { margin: 0; max-width: 58ch; color: oklch(0.87 0.03 150); } .ds-work-links { display: flex; flex-wrap: wrap; gap: 0 1.75rem; margin: 0; } .ds-link { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px; color: oklch(0.965 0.018 150); font-weight: 700; text-decoration: underline; text-decoration-color: oklch(0.88 0.22 143 / 0.42); text-decoration-thickness: 2px; text-underline-offset: 0.35em; transition: text-decoration-color 0.2s, color 0.2s; } .ds-link:hover { color: var(--signal, oklch(0.87 0.29 143)); text-decoration-color: var(--signal, oklch(0.87 0.29 143)); } .ds-link:focus-visible { outline: 3px solid var(--signal, oklch(0.87 0.29 143)); outline-offset: 3px; border-radius: 4px; } .ds-arrow { flex: none; width: 1.15em; height: 1.15em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-tag { justify-self: start; padding: 0.1rem 0.75rem; border: 1px solid oklch(0.88 0.22 143 / 0.42); border-radius: 999px; color: var(--signal-dim, oklch(0.8 0.22 144)); font-family: ui-monospace, monospace; font-size: 0.875rem; white-space: nowrap; }"
+    },
+    {
+      "name": "Product Shot",
+      "kind": "custom",
+      "refersTo": "product-shot",
+      "description": "One framed screenshot of a real product at content width: strong hairline, 6px radius, the soft dark drop, a fog-2 caption. The screenshot itself is a light-themed app, so it reads as a lit panel.",
+      "html": "<figure class=\"ds-shot\"><div class=\"ds-shot-img\" role=\"img\" aria-label=\"Screenshot of the course planner\"></div><figcaption>The planner opens on a Biological and Electrical Engineering double major. Screenshot of the live site.</figcaption></figure>",
+      "css": ".ds-shot { margin: 0; } .ds-shot-img { aspect-ratio: 16 / 10; border: 1px solid oklch(0.88 0.22 143 / 0.42); border-radius: 6px; background: linear-gradient(#461d7c 0 7%, #f3f2f7 7%); box-shadow: 0 10px 14px -10px oklch(0.03 0.02 160 / 0.9); } .ds-shot figcaption { max-width: 62ch; margin-top: 0.75rem; color: oklch(0.87 0.03 150); font-size: 0.9375rem; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Heads-Up Display",
+    "overview": "The site is what a pair of HUD glasses would show, and its home is the menu screen you would boot into: a woven neon ring turning slowly on a near-black field of faint green dots, the owner's name, pitch and role held in the ring's hole, and six bracketed labels pointing at it from either side. Nothing scrolls on the home; it is a single instrument face that says who this is and offers the next move. Inner pages keep the same ground, the same signal and the same bracket language, and read like readouts: hairline rules, ruled rows, short facts.\n\nThe ring is the signature and the only big image. It is string art: each of 128 triangles has one corner on an inner circle and two on an outer one, and the rotated copies weave into a torus. It breathes, turns, bends and brightens toward the pointer, lights the side facing a hovered label, and unravels before the next page loads. It is drawn on a canvas in the page's own signal colour; an inline SVG of the same ring stands in before the script runs.\n\nGreen is spent freely, by owner decision, but the name and body copy stay fog-white so green keeps its meaning: titles, links, labels, state, data and the ring. There are no photographs: the owner retired the forest ground and the street footage when the site became technological.",
+    "keyCharacteristics": [
+      "One neon green signal on a near-black green ground with a faint dot grid; hairlines and ticks are tinted with it.",
+      "The home is a one-viewport main menu: the ring, the name in its hole, three labels each side, a quiet bottom edge.",
+      "Atkinson Hyperlegible for words; system monospace for HUD labels and data.",
+      "Lowercase headings, labels and nav; sentence case in running text.",
+      "Ruled rows and hairlines instead of cards; depth from tone, glow only inside the canvas.",
+      "Motion is purposeful and always stoppable: a motion toggle, and reduced motion yields a still ring."
+    ],
+    "rules": [
+      {
+        "name": "The Green Is Spent Rule",
+        "body": "Green marks titles, links, labels, state, data and the ring. The name and body copy stay fog-white; if everything is green nothing is.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tinted Neutral Rule",
+        "body": "No neutral gray and no pure black or white in the UI. Hairlines and dots are signal at low alpha; fog is tinted toward 150 hue.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Photo Ground Rule",
+        "body": "The ground is the dot field: a 28px grid of 1px signal dots at 20% under a soft vignette, fixed behind every page. No photograph, video or texture sits behind the content.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono Is Data Rule",
+        "body": "Monospace appears only for HUD labels and data: menu and nav labels, the bottom edge, dates, tags, inline code. Fact-list terms are Atkinson bold in signal-dim, never mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lowercase Voice Rule",
+        "body": "The name, headings, labels, nav, buttons, wordmark and the about statement are lowercase. The statement is lowered in CSS, so its source keeps LSU and I for screen readers. The pitch line stays verbatim where it appears (the home's page title).",
+        "section": "typography"
+      },
+      {
+        "name": "The Canvas Glow Rule",
+        "body": "Light comes from the ring itself, through additive compositing in the canvas. CSS shadows are dark, low and tinted toward the ground.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the home a one-viewport menu: the ring, the name and what he does in its hole, three labels each side, and the bottom edge.",
+      "Do spend `signal` on titles, labels, links, tags, dates, icons, selection, caret, focus and the ring, and keep the name and body copy fog-white.",
+      "Do keep every neutral tinted toward green and every hairline a low-alpha signal.",
+      "Do keep monospace to HUD labels and data, and Atkinson (bold in signal-dim) for fact-list terms.",
+      "Do build lists as ruled rows, and keep headings, labels and nav lowercase.",
+      "Do keep every target at 44px or more with a 3px signal focus ring, and give any looping motion a pause control and a reduced-motion still.",
+      "Do draw the canvas in the page's `--signal` so the ring and the CSS are the same green."
+    ],
+    "donts": [
+      "Don't put a photograph, video or texture behind the content; the ground is the dot field.",
+      "Don't reintroduce amber or any second accent; the signal is one green.",
+      "Don't add coloured CSS glows or hard offset shadows; light belongs to the canvas.",
+      "Don't turn the home into a scrolling landing page or put anything in the ring's hole but the name.",
+      "Don't set body copy or the name in green, or set fact-list terms in mono.",
+      "Don't use cards as the page structure."
+    ]
+  }
+}

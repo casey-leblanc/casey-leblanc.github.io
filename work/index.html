@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work | Casey LeBlanc</title>
+    <meta name="description" content="Research and design work by Casey LeBlanc at LSU, the General Engineering Course Planner, and the ideas he wants to build next.">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#060d09">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Casey LeBlanc">
+    <meta property="og:title" content="Work | Casey LeBlanc">
+    <meta property="og:description" content="Research and design work by Casey LeBlanc at LSU, the General Engineering Course Planner, and the ideas he wants to build next.">
+    <meta property="og:url" content="https://caseyleblanc.dev/work/">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://caseyleblanc.dev/work/">
+    <link rel="icon" href="../Assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="../Assets/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../site.css">
+    <script>
+        // motion.js prints the page in. It only runs when motion is allowed, and the page shows anyway if it never loads.
+        if (matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+            document.documentElement.classList.add("motion");
+            setTimeout(function () {
+                if (!document.documentElement.classList.contains("motion-ready")) document.documentElement.classList.remove("motion");
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <a class="wordmark" href="../">
+                <svg class="mark" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="8.2"/><circle cx="10" cy="10" r="4.2"/><path d="M10 1.8 13.6 6.4M18.2 10 13.6 13.6M10 18.2 6.4 13.6M1.8 10 6.4 6.4"/></svg>
+                casey leblanc
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="../about/">about</a></li>
+                    <li><a href="../work/" aria-current="page">work</a></li>
+                    <li><a href="../planner/">planner</a></li>
+                    <li><a href="../blog/">blog</a></li>
+                    <li><a href="../resume/">resume</a></li>
+                    <li><a href="../about/#contact">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="wrap">
+            <header class="page-head">
+                <h1 class="page-title">work</h1>
+            </header>
+        </div>
+
+        <section class="section" id="lab" aria-labelledby="lab-title">
+            <div class="wrap section-grid">
+                <h2 class="section-title" id="lab-title">in the lab</h2>
+                <ul class="rows">
+                    <li class="row row-work">
+                        <h3 class="row-title">TURTLE Logger</h3>
+                        <p class="row-text">An open-source, Arduino-based thermocouple data logger. I wrote the C++ and Python for it at LSU&#8217;s Aquatic Germplasm and Genetic Resources Center.</p>
+                        <span class="tag">research</span>
+                    </li>
+                    <li class="row row-work">
+                        <h3 class="row-title">Cryopreservation hardware</h3>
+                        <p class="row-text">Open-source devices for cryopreserving aquatic species, designed in Fusion and prototyped in FFF, SLA and SLS.</p>
+                        <span class="tag">research</span>
+                    </li>
+                    <li class="row row-work">
+                        <h3 class="row-title">Community Playground Project</h3>
+                        <p class="row-text">3D mockups of playgrounds for communities in need, designed in Autodesk Fusion. I&#8217;m the design engineer on it.</p>
+                        <span class="tag">design</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="tools" aria-labelledby="tools-title">
+            <div class="wrap section-grid">
+                <h2 class="section-title" id="tools-title">for students</h2>
+                <ul class="rows">
+                    <li class="row row-work">
+                        <h3 class="row-title">General Engineering Course Planner</h3>
+                        <div class="row-body">
+                            <p class="row-text">A degree planner for LSU engineering students. You drag courses into semesters and it checks prerequisites and keeps track of every requirement, even for a double major. It started as Dr. Bruno Rego&#8217;s Biological Engineering planner, and I extended it.</p>
+                            <p class="row-links">
+                                <a class="btn-link" href="https://caseyleblanc.dev/general-engineering-course-planner/" target="_blank" rel="noopener noreferrer">open the planner<span class="visually-hidden"> (opens in a new tab)</span> <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
+                                <a class="btn-link" href="../planner/">how it works <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M11 5l5 5-5 5"/></svg></a>
+                            </p>
+                        </div>
+                        <span class="tag">web app</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="ideas" aria-labelledby="ideas-title">
+            <div class="wrap section-grid">
+                <h2 class="section-title" id="ideas-title">ideas</h2>
+                <ul class="rows">
+                    <li class="row row-work">
+                        <h3 class="row-title">HUD glasses</h3>
+                        <p class="row-text">A snap-on attachment that projects a heart-rate readout from my smartwatch onto my glasses. Maybe computer vision later.</p>
+                        <span class="tag">idea</span>
+                    </li>
+                    <li class="row row-work">
+                        <h3 class="row-title">Robotic arm gantry</h3>
+                        <p class="row-text">A three-joint arm on a wall-mounted gantry, moved with inverse kinematics.</p>
+                        <span class="tag">idea</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Casey LeBlanc &middot; <a href="mailto:caseyleblanco06@gmail.com">caseyleblanco06@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/casey-leblanc-04265731b/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a> &middot; <a href="https://github.com/casey-leblanc" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+        </div>
+    </footer>
+    <script src="../motion.js" defer></script>
+</body>
+</html>
