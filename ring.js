@@ -102,10 +102,12 @@
     function resize() {
         const r = box.getBoundingClientRect();
         if (!r.width || !r.height) return;
-        const zone = parseFloat(getComputedStyle(stage).getPropertyValue("--label-px")) || 0;
+        const css = getComputedStyle(stage);
+        const zone = parseFloat(css.getPropertyValue("--label-px")) || 0;
+        const fill = parseFloat(css.getPropertyValue("--ring-fill")) || 0.46; // smaller on desktop, to clear the top and bottom lines
         view.cx = r.width / 2;
         view.cy = r.height / 2;
-        view.ro = Math.max(40, Math.min(r.height * 0.46, (r.width - 2 * zone) * 0.45));
+        view.ro = Math.max(40, Math.min(r.height * fill, (r.width - 2 * zone) * 0.45));
         view.ri = view.ro * INNER;
         // the canvas covers the ring at its furthest bend and unravel, and the dial, rather than the whole stage
         const reach = Math.ceil(Math.max(view.ro * 1.31, view.ro * 1.17 + 10)) + 2;

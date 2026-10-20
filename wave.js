@@ -1,5 +1,7 @@
 /* A dotted terrain under the about page's heading: rows of dots in perspective, lifted by a slow
-   travelling wave. Decorative only; it holds still for reduced motion and stops while off screen. */
+   travelling wave. Decorative only. Each time it comes into view it moves for about five seconds,
+   then eases to a stop, at no more than 30fps. It holds still for reduced motion and when the home's
+   "pause motion" is on, and stops while off screen. */
 (() => {
     "use strict";
 
@@ -15,6 +17,8 @@
     const ink = (a) => (oklchOk ? `oklch(${signal.trim()} / ${a.toFixed(3)})` : `rgba(0,255,65,${a.toFixed(3)})`);
 
     const ROWS = 22;
+    const RUN = 5; // seconds of motion each time it comes into view, before it settles
+    const SETTLE = 1.5; // seconds to ease to a stop
     let W = 0;
     let H = 0;
     let dpr = 1;
@@ -23,6 +27,13 @@
     let last = 0;
     let running = false;
     let visible = true;
+    let ran = 0; // seconds moved since it last came into view
+    let paused = false;
+    try {
+        paused = localStorage.getItem("ring-motion") === "off";
+    } catch (e) {
+        /* storage blocked: motion stays on */
+    }
 
     function resize() {
         const r = canvas.getBoundingClientRect();
@@ -61,13 +72,20 @@
     function frame(now) {
         raf = requestAnimationFrame(frame);
         if (!last) last = now;
-        t += Math.min(0.05, (now - last) / 1000);
+        const gap = now - last;
+        if (gap < 1000 / 30 - 4) return; // slow terrain looks the same at 30fps
         last = now;
+        const dt = Math.min(0.05, gap / 1000);
+        ran += dt;
+        // after its run, the wave slows to a stop
+        const speed = ran < RUN ? 1 : Math.max(0, 1 - (ran - RUN) / SETTLE);
+        t += dt * speed;
         draw();
+        if (!speed) stop();
     }
 
     function start() {
-        if (running || reduce.matches || !visible || document.hidden) return;
+        if (running || reduce.matches || paused || !visible || document.hidden || ran >= RUN + SETTLE) return;
         running = true;
         last = 0;
         raf = requestAnimationFrame(frame);
@@ -80,7 +98,9 @@
 
     if ("IntersectionObserver" in window) {
         new IntersectionObserver((entries) => {
+            const was = visible;
             visible = entries[entries.length - 1].isIntersecting;
+            if (visible && !was) ran = 0; // back in view: a fresh run
             if (visible) start();
             else stop();
         }).observe(canvas);

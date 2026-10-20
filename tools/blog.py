@@ -21,6 +21,8 @@ Post format (frontmatter, then markdown):
     date: 2026-10-02
     summary: optional one-liner for the about page (defaults to the first paragraph)
     draft: true            optional, leaves the post out of the build
+    featured: true         optional, shows the post on the about page (with none featured,
+                           the about page shows only the newest post)
     ---
 
 Same-day posts are ordered by file name. Headings in a post: # ## ### become h3,
@@ -38,7 +40,7 @@ ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = ROOT / "posts"
 BLOG_PAGE = ROOT / "blog" / "index.html"
 HOME_PAGE = ROOT / "about" / "index.html"  # the latest posts appear on the about page
-LATEST_COUNT = 3
+LATEST_COUNT = 3  # at most this many featured posts on the about page
 
 ARROW_SVG = (
     '<svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false">'
@@ -306,8 +308,9 @@ def render_blocks(lines):
 # ---------------------------------------------------------------------------
 
 class Post:
-    def __init__(self, path, title, date, summary, body_html, draft):
+    def __init__(self, path, title, date, summary, body_html, draft, featured=False):
         self.path = path
+        self.featured = featured
         self.title = title
         self.date = date
         self.summary = summary
@@ -367,7 +370,8 @@ def load_post(path):
     body_html, first = render_blocks(body.split("\n"))
     summary = meta.get("summary") or shorten(plain_text(first or ""))
     draft = meta.get("draft", "").lower() in ("true", "yes", "1")
-    return Post(path, title, date, summary, body_html, draft)
+    featured = meta.get("featured", "").lower() in ("true", "yes", "1")
+    return Post(path, title, date, summary, body_html, draft, featured)
 
 
 def load_posts():
@@ -437,7 +441,8 @@ def latest_fragment(posts):
     if not posts:
         return '<li class="row"><p class="row-text">no posts yet.</p></li>'
     rows = []
-    for p in posts[:LATEST_COUNT]:
+    featured = [p for p in posts if p.featured][:LATEST_COUNT]
+    for p in featured or posts[:1]:
         rows.append(
             f'<li class="row row-post"><a class="row-link" href="../blog/#{p.id}">'
             f'<time datetime="{p.date.isoformat()}">{nice_date(p.date)}</time>'

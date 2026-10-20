@@ -915,7 +915,7 @@ a:hover > .arrow,
 }
 
 .prose {
-    max-width: 68ch;
+    max-width: 32em; /* about 72 characters of Atkinson at this size */
     font-size: 1.125rem;
     line-height: 1.75;
 }
@@ -1077,7 +1077,7 @@ a:hover > .arrow,
 }
 
 /* waiting for its turn */
-.motion :is(.page-title, .section-title, .summary-title, .statement, .page-intro, .rows > li, .facts > .fact, .link-list > li, .outline-list > li, .post-head, .actions, .page-note, .more, .contact-mail, main > .wave, .planner-shot, .pdf-frame):not(.is-in) {
+.motion :is(.page-title, .section-title, .summary-title, .statement, .page-intro, .rows > li, .facts > .fact, .link-list > li, .outline-list > li, .post-head, .actions, .page-note, .more, .contact-mail, main > .wave, .planner-shot, .pdf-frame, .showcase):not(.is-in) {
     opacity: 0;
 }
 
@@ -1178,7 +1178,7 @@ a:hover > .arrow,
 }
 
 /* buttons, notes, pictures and the wave lift in */
-.motion :is(.actions, .page-note, .more, .contact-mail, main > .wave, .planner-shot, .pdf-frame).is-in {
+.motion :is(.actions, .page-note, .more, .contact-mail, main > .wave, .planner-shot, .pdf-frame, .showcase).is-in {
     animation: lift 0.7s var(--ease) var(--d, 0ms) backwards;
 }
 @keyframes lift {
@@ -1241,6 +1241,111 @@ a:hover > .arrow,
     margin-top: clamp(0.5rem, 2vw, 1.5rem);
 }
 
+/* ---------- showcase: CAD parts turning in a HUD viewer (showcase/showcase.js) ---------- */
+
+.showcase {
+    display: grid;
+    gap: 1.25rem;
+    margin: clamp(2rem, 5vw, 3.25rem) 0 clamp(3.5rem, 9vw, 7rem);
+}
+@media (min-width: 900px) {
+    .showcase {
+        grid-template-columns: minmax(0, 1fr) minmax(14rem, 18rem);
+        align-items: start;
+    }
+}
+/* the viewer: four corner brackets, like a HUD locking onto the part */
+.viewer {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background:
+        linear-gradient(var(--signal) 0 0) left top / 1.5rem 1.5px,
+        linear-gradient(var(--signal) 0 0) left top / 1.5px 1.5rem,
+        linear-gradient(var(--signal) 0 0) right top / 1.5rem 1.5px,
+        linear-gradient(var(--signal) 0 0) right top / 1.5px 1.5rem,
+        linear-gradient(var(--signal) 0 0) left bottom / 1.5rem 1.5px,
+        linear-gradient(var(--signal) 0 0) left bottom / 1.5px 1.5rem,
+        linear-gradient(var(--signal) 0 0) right bottom / 1.5rem 1.5px,
+        linear-gradient(var(--signal) 0 0) right bottom / 1.5px 1.5rem;
+    background-repeat: no-repeat;
+}
+.viewer canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    touch-action: pan-y;
+}
+.viewer canvas:active {
+    cursor: grabbing;
+}
+.viewer canvas:focus-visible {
+    outline-offset: -3px;
+}
+.viewer-readout {
+    position: absolute;
+    left: 1.25rem;
+    bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    margin: 0;
+    color: var(--fog-2);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+}
+.viewer-readout [data-readout-name] {
+    color: var(--signal);
+}
+.is-loading .viewer-readout [data-readout-name]::after {
+    content: " …";
+}
+.viewer-fallback {
+    display: none;
+}
+.no-webgl .viewer-fallback {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 2rem;
+    color: var(--fog-2);
+    text-align: center;
+}
+/* the parts to choose from, as bracket labels */
+.model-list {
+    display: grid;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.model-list button {
+    width: 100%;
+    min-height: 44px;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: none;
+    color: var(--fog-2);
+    font: inherit;
+    font-family: var(--mono);
+    font-size: 0.875rem;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+}
+.model-list button:hover {
+    color: var(--signal);
+}
+.model-list button[aria-pressed="true"] {
+    border-color: var(--line-strong);
+    color: var(--signal);
+}
+
 /* ---------- home: the main menu screen ---------- */
 
 /* registered so the script can read the label zone back in pixels */
@@ -1252,7 +1357,8 @@ a:hover > .arrow,
 
 .home-stage {
     --label-px: clamp(10rem, 16vw, 14rem);
-    --hole: calc(0.46 * min(100svh, 100vw - 2 * var(--label-px)));
+    --ring-fill: 0.39; /* outer radius as a share of the stage height; ring.js reads it too */
+    --hole: calc(var(--ring-fill) * 1.04 * min(100svh, 100vw - 2 * var(--label-px)));
     position: relative;
     flex: 1;
     min-height: 100vh;
@@ -1435,6 +1541,25 @@ a:hover > .arrow,
     fill: var(--signal-strong);
 }
 
+/* the top edge: what Casey does, mirroring the bottom edge */
+.home-id {
+    position: absolute;
+    top: clamp(0.6rem, 2.2vh, 1.4rem);
+    left: 50%;
+    z-index: 3;
+    width: max-content;
+    max-width: max(100% - 2 * var(--label-px), 34ch);
+    margin: 0;
+    transform: translateX(-50%);
+    color: var(--fog);
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-wrap: balance;
+    transition: opacity 0.35s;
+}
+
 /* the bottom edge: the current role, the motion switch, the email */
 .home-now,
 .motion-toggle,
@@ -1443,7 +1568,7 @@ a:hover > .arrow,
     bottom: clamp(0.75rem, 3vh, 1.75rem);
     z-index: 3;
     font-family: var(--mono);
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     letter-spacing: 0.02em;
     text-transform: lowercase;
     transition: opacity 0.35s;
@@ -1527,6 +1652,8 @@ a:hover > .arrow,
     transform: translateX(2.5rem);
 }
 .is-leaving .menu ul,
+.is-leaving .home-id,
+.menu-return .home-id,
 .is-leaving .home-now,
 .is-leaving .home-mail,
 .is-leaving .motion-toggle,
@@ -1557,10 +1684,23 @@ a:hover > .arrow,
         transform 0.7s var(--ease) 0.15s;
 }
 .is-gathering .menu ul,
+.is-gathering .home-id,
 .is-gathering .home-now,
 .is-gathering .home-mail,
 .is-gathering .motion-toggle {
     transition: opacity 0.6s ease-out 0.2s;
+}
+
+/* narrow laptops, where the top line wraps to two rows: a smaller ring keeps it clear */
+@media (max-width: 1150px) {
+    .home-stage {
+        --ring-fill: 0.36;
+    }
+    .home-now,
+    .motion-toggle,
+    .home-mail {
+        font-size: 0.8rem;
+    }
 }
 
 /* phones, and screens too short for labels beside the ring: the ring on top with the name inside,
@@ -1568,6 +1708,7 @@ a:hover > .arrow,
 @media (max-width: 819px), (max-height: 560px) {
     .home-stage {
         --label-px: 0px;
+        --ring-fill: 0.46;
         --ring-h: min(100vw, 58svh);
         --hole: calc(0.46 * var(--ring-h));
         display: flex;
@@ -1585,6 +1726,12 @@ a:hover > .arrow,
     }
     .who {
         display: contents;
+    }
+    .home-id {
+        position: static;
+        width: min(100% - 2 * var(--gutter), 26rem);
+        margin: 0.25rem 0 0;
+        transform: none;
     }
     .who-name {
         position: absolute;

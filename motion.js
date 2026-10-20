@@ -20,7 +20,7 @@
     const CAP = 6; // items after this many share the last delay
 
     // the parts that get revealed, each with a way of arriving
-    const GROUPS = ".page-head, main > .wave, .planner-shot, .section, .outline, .post, .pdf-frame, .resume-summary";
+    const GROUPS = ".page-head, main > .wave, .planner-shot, .showcase, .section, .outline, .post, .pdf-frame, .resume-summary";
     const PARTS = [
         [".page-title", "title"],
         [".section-title, .summary-title", "heading"],
@@ -148,7 +148,8 @@
         if (group.dataset.printed) return;
         group.dataset.printed = "";
         const now = performance.now();
-        let at = Math.max(0, nextFree - now);
+        // a post's text never hides, so its head can't wait in the queue behind the page title
+        let at = group.matches(".post, .outline") ? 120 : Math.max(0, nextFree - now);
         const start = at;
         const tidy = [];
         let last = at + 700;
